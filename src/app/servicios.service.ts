@@ -25,7 +25,7 @@ export class ServiciosService {
     this.enviarSuperSubject.next(superheore);
   }
 
-  addSuperheore() : List[]{
+  addSuperheore(superheore: string) : List[]{
         this.lista.push({
           superheroe: this.superheroe
         });

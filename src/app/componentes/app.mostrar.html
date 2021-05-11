@@ -1,5 +1,6 @@
 <h3> Lista de superheroes </h3>
 
 <ul>
-    <li *ngFor="let list of lista">{{ superheroe }}</li>
+    <li *ngFor="let list of lista">{{superheroe}}</li>
 </ul>
+<input class="btn" type="submit" value="Añadir a la lista" (click)="addList()">

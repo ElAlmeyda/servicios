@@ -1,9 +1,6 @@
 import { Component, Input, Output } from '@angular/core';
 import { ServiciosService } from './../servicios.service'
 
-class List{
-  superheroe:string="";
-}
 
 @Component({
   selector: "app-detalles",
@@ -14,7 +11,6 @@ class List{
   export class AppFinal {
 
     @Input () superheroe:string="";
-    @Output() lista:List[] = [];
 
     constructor(private _servicio:ServiciosService){
       
@@ -25,8 +21,5 @@ class List{
         this.superheroe = superheroe)
     }
 
-    addList(){
-      this.lista = this._servicio.addSuperheore();
-    }
 
   }

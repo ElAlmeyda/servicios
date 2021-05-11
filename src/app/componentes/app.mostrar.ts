@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ServiciosService } from './../servicios.service'
 
 class List {
@@ -12,9 +12,8 @@ class List {
   })
 
   export class AppMostrar {
-    superheroe:string ="";
-    aux:string="";
-    lista: List[] = [];
+    @ Input () superheroe:string ="";
+    @Input () lista: List[] = [];
 
     constructor(public _servicio:ServiciosService){
       
@@ -22,7 +21,11 @@ class List {
 
 
     ngOnInit(){
-      this.lista = this._servicio.lista;
+    }
+
+    addList(){
+      this.superheroe = this._servicio.superheroe;
+      this.lista = this._servicio.addSuperheore(this.superheroe);
     }
     
   }
